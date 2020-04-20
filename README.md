@@ -1,2 +1,12 @@
-# github-action-sql-syntax-check
-Scan your sql files and report any syntax problems
+# Description
+
+This github action scans sql files in your code and report any syntax problems
+
+
+#License
+
+Gpl v3
+
+# References
+
+- https://github.com/JSQLParser/JSqlParser
