@@ -3,7 +3,7 @@
 This github action scans sql files in your code and report any syntax problems
 
 
-#License
+# License
 
 Gpl v3
 
