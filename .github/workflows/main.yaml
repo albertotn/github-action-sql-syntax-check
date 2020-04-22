@@ -8,11 +8,23 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Fetch action
+        id: pl
+        uses: Rishabh510/Path-lister-action@master
+        with:
+          path: "./"
+          type: ".sql"
+      - name: Output results
+        run: |
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
+          for i in ${{ steps.pl.outputs.paths }}; do
+          echo $i
+          done
       - name: Hello world action step
         uses: ./sql-syntax-action # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Mona the Octocat'
+          fileInput: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "Result ${{ steps.hello.outputs }}"

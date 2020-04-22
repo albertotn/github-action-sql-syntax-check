@@ -2,7 +2,7 @@
 name: 'Sql Syntax check'
 description: 'Check syntax for your sql files'
 inputs:
-  file:  
+  fileInput:  
     description: 'File to check'
     required: true
 outputs:
