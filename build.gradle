@@ -16,7 +16,9 @@ repositories {
 sourceCompatibility = 11
 
 dependencies {
-	compile "com.github.jsqlparser:jsqlparser:3.1"
+	compile "com.github.jsqlparser:jsqlparser:3.1",
+			"commons-io:commons-io:2.6"
+	
 	
 	testImplementation(enforcedPlatform("org.junit:junit-bom:5.4.0")) // JUnit 5 BOM
 	testImplementation("org.junit.jupiter:junit-jupiter")

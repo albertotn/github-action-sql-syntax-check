@@ -4,7 +4,7 @@ import it.albertotn.action.ssc.exception.SyntaxException;
 import net.sf.jsqlparser.JSQLParserException;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
 
-public class SqlSyntaxCheck {
+public final class SqlSyntaxCheck {
 
 	public void parse(String sql) throws SyntaxException {
 		try {

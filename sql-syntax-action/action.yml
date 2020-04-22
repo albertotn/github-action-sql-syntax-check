@@ -1,0 +1,15 @@
+# action.yml
+name: 'Sql Syntax check'
+description: 'Check syntax for your sql files'
+inputs:
+  file:  
+    description: 'File to check'
+    required: true
+outputs:
+  result: 
+    description: 'Syntax check result'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ file }}
