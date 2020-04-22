@@ -1,6 +1,6 @@
 package it.albertotn.action.ssc;
 
-import net.sf.jsqlparser.JSQLParserException;
+import it.albertotn.action.ssc.exception.SyntaxException;
 
 public class Main {
 
@@ -8,7 +8,8 @@ public class Main {
 		SqlSyntaxCheck ssc = new SqlSyntaxCheck();
 		try {
 			ssc.parse(args[0]);
-		} catch (JSQLParserException jpe) {
+			System.out.println("Syntax check success");
+		} catch (SyntaxException jpe) {
 			jpe.printStackTrace(System.err);
 		}
 	}
