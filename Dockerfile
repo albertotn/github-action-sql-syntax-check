@@ -1,4 +1,10 @@
-FROM adoptopenjdk/openjdk11:ubi
+FROM gradle:jdk11 as builder
+
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build
+
+FROM openjdk:11-jre-slim
 
 ARG JAR_FILE=build/libs/github-action-sql-syntax-check.jar
 
