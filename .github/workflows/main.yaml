@@ -17,7 +17,7 @@ jobs:
            echo $STEP_FILES
            echo ---
       - name: Hello world action step
-        uses: albertotn/github-action-sql-syntax-check/sql-syntax-action/sql-syntax-check@master # Uses an action in the root directory
+        uses: albertotn/github-action-sql-syntax-check/sql-syntax-action@master # Uses an action in the root directory
         id: hello
         with:
           fileInput: $STEP_FILES
