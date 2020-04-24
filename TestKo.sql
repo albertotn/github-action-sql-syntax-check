@@ -1,1 +1,1 @@
-selec for
+selec forr
