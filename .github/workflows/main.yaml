@@ -17,4 +17,4 @@ jobs:
         uses: ./sql-syntax-action # Uses an action in the root directory
         id: hello
         with:
-          fileInput: ${{  push.paths}}}}
+          fileInput: 
