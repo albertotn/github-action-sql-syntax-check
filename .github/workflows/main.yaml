@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: prin files with .sql extension
+        run : |
+           find . -name '*.sql'
       - name: Hello world action step
         uses: ./sql-syntax-action # Uses an action in the root directory
         id: hello
