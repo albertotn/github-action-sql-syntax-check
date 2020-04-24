@@ -17,7 +17,7 @@ jobs:
            echo $STEP_FILES
            echo ---
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: ./Sql Syntax check # Uses an action in the root directory
         id: hello
         with:
           fileInput: $STEP_FILES
