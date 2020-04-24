@@ -11,6 +11,6 @@ outputs:
     description: 'Syntax check result'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'sql-syntax-action/Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}    
