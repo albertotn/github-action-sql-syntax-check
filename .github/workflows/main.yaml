@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: print files with .sql extension
         run : |
-           set-env STEPFILES=$(find . -name '*.sql')
+           echo "::set-env name=STEPFILES::$(find . -name '*.sql')"
            echo ---
            echo $STEPFILES
            echo ---
