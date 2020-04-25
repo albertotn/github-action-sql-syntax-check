@@ -2,7 +2,8 @@ on:
   push:
     paths:
     - '**.sql'
-    
+env:
+  STEPFILES: ''   
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -12,12 +13,12 @@ jobs:
         uses: actions/checkout@v2
       - name: print files with .sql extension
         run : |
-           STEP_FILES=$(find . -name '*.sql')
+           STEPFILES=$(find . -name '*.sql')
            echo ---
-           echo $STEP_FILES
+           echo $STEPFILES
            echo ---
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          fileInput: ${{ env.STEP_FILES }}
+          fileInput: ${{ env.STEPFILES }}
