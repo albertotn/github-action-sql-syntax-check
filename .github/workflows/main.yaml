@@ -20,4 +20,4 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          fileInput: ${{ $STEP_FILES }}
+          fileInput: ${{ env.STEP_FILES }}
