@@ -9,7 +9,7 @@ FROM openjdk:11-jre-slim
 ARG JAR_FILE=build/libs/github-action-sql-syntax-check.jar
 
 # cd /usr/local/runme
-# WORKDIR /usr/local/runme
+WORKDIR /home/gradle/src
 
 # copy jar /usr/local/runme/app.jar
 COPY ${JAR_FILE} app.jar
