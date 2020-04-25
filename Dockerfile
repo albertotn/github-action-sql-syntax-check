@@ -1,15 +1,10 @@
 FROM gradle:jdk11 as builder
 
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle build
-
-FROM openjdk:11-jre-slim
+WORKDIR /app
+COPY . /app
+RUN gradle clean build
 
 ARG JAR_FILE=build/libs/github-action-sql-syntax-check.jar
-
-# cd /usr/local/runme
-WORKDIR /home/gradle/src
 
 # copy jar /usr/local/runme/app.jar
 COPY ${JAR_FILE} app.jar
