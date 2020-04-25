@@ -2,10 +2,9 @@
 name: 'Sql Syntax check'
 description: 'Check syntax for your sql files'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  fileInput:
+    description: 'file to check'
     required: true
-    default: 'World'
 outputs:
   result: 
     description: 'Syntax check result'
@@ -13,4 +12,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}    
+    - ${{ inputs.fileInput }}    
