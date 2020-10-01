@@ -13,9 +13,15 @@ public final class Main {
 	public static void main(String[] args) {
 		SqlSyntaxCheck ssc = new SqlSyntaxCheck();
 		try {
-			String content = FileUtils.readFileToString(new File(args[0]), StandardCharsets.UTF_8);
-			ssc.parse(content);
-			System.out.println("Syntax check success");
+			if(!args[0].isEmpty()){
+				String content = FileUtils.readFileToString(new File(args[0]), StandardCharsets.UTF_8);
+				ssc.parse(content);
+				System.out.println("Syntax check success");
+			}
+			else
+				System.out.println("No Argument Present");
+
+
 		} catch (SyntaxException | IOException jpe) {
 			jpe.printStackTrace(System.err);
 		}
